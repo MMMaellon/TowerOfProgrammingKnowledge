@@ -2,5 +2,5 @@ node_modules
 dist
 tmp
 
-/TowerOfProgrammingKnowledge/public/
-/TowerOfProgrammingKnowledge/resources/_gen/
+/public/
+/resources/
