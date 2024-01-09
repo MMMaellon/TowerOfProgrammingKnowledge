@@ -1,0 +1,20 @@
+{{- $id := (.Get "id") }}
+{{- $greetings := (.Get "greetings") }}
+{{- $height := (.Get "height") }}
+{{- $prompt := (.Get "prompt") }}
+
+<div id="{{ $id | default "main_content" }}" class="terminal"></div>
+<script>
+var __EVAL = (s) => eval(`void (__EVAL = ${__EVAL}); ${s}`);
+{{ $id | default "main_content" | safeJS }} = $("#{{ $id | default "main_content" }}").terminal({
+    {{ .Inner | safeJS }}
+}, {
+    
+    greetings: "{{ $greetings | default "" }}",
+    name: "terminal",
+    {{ if strings.ContainsNonSpace $height }}
+    height: {{ $height | default 100 }},
+    {{ end }}
+    prompt: ">> ",
+});
+</script>

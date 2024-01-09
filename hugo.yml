@@ -1,24 +1,26 @@
-baseURL: https://example.org/
+baseURL: https://mmmaellon.github.io/TowerOfProgrammingKnowledge/
 languageCode: en-us
-title: The Tower of Programming Knowledge
+title: "The Tower of Programming Knowledge"
 theme: "PaperMod"
 
 params:
     profileMode:
         enabled: true
-        subtitle: "This is subtitle"
-        imageUrl: "https://images.unsplash.com/photo-1534239697798-120952b76f2b?q=80&w=3989&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" # optional
-        imageTitle: "The Tower of Programming Knowledge" # optional
-        # imageWidth: 120 # custom size
-        # imageHeight: 120 # custom size
+        imageUrl: "https://images.unsplash.com/photo-1536557869186-5a2f30e1ba9c?q=80&h=480&w=480&auto=format&fit=crop&crop=bottom&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageHeight: 480
+        imageWidth: 480
+        # subtitle: "Tutorial series by MMMaellon"
         buttons:
-            - name: "Ascend the tower."
-            # url: "/archive"
-            # - name: Github
-            # url: "https://github.com/"
+            - name: Ascend >>
+              url: "start"
+    cover:
+        responsiveImages: true
+    # ShowReadingTime: true
+    # ShowBreadCrumbs: true
+    ShowToc: true
+    ShowPostNavLinks: true
 
-    # socialIcons: # optional
-    #     - name: "<platform>"
-    #         url: "<link>"
-    #     - name: "<platform 2>"
-    #         url: "<link2>"
+markup:
+    goldmark:
+        renderer:
+            unsafe: true

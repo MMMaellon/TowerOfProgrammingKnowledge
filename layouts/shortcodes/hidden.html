@@ -1,0 +1,6 @@
+{{- $id := (.Get "id") }}
+
+<div id="{{ $id | default "hidden_content" }}" class="hidden">
+    {{ .Inner | markdownify }}
+</div>
+

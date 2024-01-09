@@ -1,0 +1,53 @@
+.terminal {
+    --color: rgba(0, 200, 0, 0.99);
+    --animation: terminal-glow;
+    --glow: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        --animation: terminal-none;
+    }
+}
+
+:root {
+    --size: 1.5;
+        --weight:700;
+        --font: lotion;
+}
+@font-face {
+    /* font-family: msdos; */
+    /*     src: url("https://cdn.jsdelivr.net/gh/jcubic/static/assets/dos-vga.ttf"); */
+    font-family: lotion;
+        src: url("/TowerOfProgrammingKnowledge/Lotion-Regular.ttf");
+}
+
+.preloader {
+    font-family: lotion;
+}
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.fade-in { animation: fadeIn 3s; }
+.fade-in-slow { animation: fadeIn 8s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
