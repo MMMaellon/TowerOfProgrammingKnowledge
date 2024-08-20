@@ -23,16 +23,14 @@ async function animation(){
     $('#asdf').removeClass("hidden");
     term.focus(true);
     await term.echo("[[g;white;]The Tower of Programming Knowledge]", { typing: true, delay: 50, keepWords: true } );
-    await term.echo("----------------------------------\nThis tower shares with all who ask the knowledge needed to make his or her first programming journey.", { typing: true, delay: 2, keepWords: true } );
-    await term.echo("\nAll it asks for in return is your determination to reach its peak.", { typing: true, delay: 2, keepWords: true } );
-    await term.echo("\nEnter your name to proceed.", { typing: true, delay: 50, keepWords: true } );
-    term.read(">> ").then(async (name) =>{
-        await term.set_prompt("\nBe welcomed to this place, [[g;white;]" + name + "].", {typing: true, delay: 50, keepWords: true});
+    await term.echo("----------------------------------\n", { typing: true, delay: 2, keepWords: true } );
+    await term.echo("\nType anything to proceed.", { typing: true, delay: 50, keepWords: true } );
+    term.read(">> ").then(async (_) =>{
+        await term.echo("\nBe welcomed to this place, user.", {typing: false, delay: 20, keepWords: true});
         term.freeze(true);
         await sleep(1000);
-        window.location.href = '/TowerOfProgrammingKnowledge/next';
+        window.location.href = '/TowerOfProgrammingKnowledge/low-level/';
     });
-    // term.freeze(true);
 }
 
 animation()

@@ -16,7 +16,7 @@ params:
     cover:
         responsiveImages: true
     # ShowReadingTime: true
-    # ShowBreadCrumbs: true
+    ShowBreadCrumbs: true
     ShowToc: true
     ShowPostNavLinks: true
 
